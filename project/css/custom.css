@@ -1,0 +1,234 @@
+/* Custom Styles to override UIkit */
+
+/* Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, .uk-navbar-item.uk-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.uk-heading-medium, .uk-heading-large {
+    font-weight: 700;
+}
+
+/* Custom colors */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #0f172a;
+    --accent-color: #f97316;
+    --light-color: #f8fafc;
+    --dark-color: #1e293b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+/* Primary Button */
+.uk-button-primary {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.uk-button-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Secondary backgrounds */
+.uk-section-secondary, .uk-background-secondary {
+    background-color: var(--secondary-color);
+}
+
+/* Card hover effects */
+.uk-card-hover:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar customization */
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.uk-navbar-sticky {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.uk-navbar-nav > li > a {
+    font-weight: 500;
+    text-transform: none;
+    font-size: 16px;
+    color: var(--dark-color);
+}
+
+.uk-navbar-nav > li.uk-active > a {
+    color: var(--primary-color);
+}
+
+/* Logo styling */
+.uk-logo {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* Progress bar */
+.uk-progress {
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+}
+
+.uk-progress::-webkit-progress-value {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.uk-progress::-moz-progress-bar {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Alert customization */
+.uk-alert-primary {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border-color: #bfdbfe;
+}
+
+.uk-alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-color: #a7f3d0;
+}
+
+.uk-alert-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+}
+
+/* Form elements */
+.uk-input, .uk-select, .uk-textarea {
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Hero section overlay */
+.uk-overlay-primary {
+    background: rgba(15, 23, 42, 0.7);
+}
+
+/* Card label customization */
+.uk-label {
+    background-color: var(--primary-color);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* Icon customization */
+.uk-icon-button {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transition: all 0.3s ease;
+}
+
+.uk-icon-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Footer customization */
+footer {
+    border-top: 1px solid #e2e8f0;
+}
+
+footer a {
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Section customization */
+.uk-section-muted {
+    background-color: #f8fafc;
+}
+
+.uk-section-primary {
+    background-color: var(--primary-color);
+}
+
+/* Divider customization */
+.uk-divider-small::after {
+    border-top: 2px solid var(--primary-color);
+}
+
+/* Animation for cards */
+.uk-card {
+    transition: all 0.3s ease;
+}
+
+/* Process steps hover effect */
+.uk-transition-scale-up {
+    transition: transform 0.3s ease;
+}
+
+/* Accordion customization */
+.uk-accordion-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.uk-accordion-title:hover {
+    color: var(--primary-color);
+}
+
+/* Totop button */
+a[uk-totop] {
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+a[uk-totop]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .uk-heading-medium {
+        font-size: 2rem;
+    }
+    
+    .uk-text-lead {
+        font-size: 1.2rem;
+    }
+}
