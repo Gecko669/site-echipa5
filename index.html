@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Personal Website</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- UIkit JS -->
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" href="index.html">John Doe</a>
+            </div>
+            
+            <div class="uk-navbar-right uk-visible@m">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="uk-navbar-right uk-hidden@m">
+                <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Off-canvas Menu -->
+    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+        <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
+            <h1 class="uk-heading-medium" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.3">John Doe</h1>
+            <p class="uk-text-lead" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.3; delay: 200">Web Developer & Designer</p>
+            <a class="uk-button uk-button-primary uk-margin-top" href="contact.html" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.3; delay: 400">Contact Me</a>
+        </div>
+    </div>
+    
+    <!-- Alert -->
+    <div class="uk-container uk-margin-medium-top">
+        <div class="uk-alert-primary" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
+            <p>Welcome to my personal website! Here you can learn about my skills and projects.</p>
+        </div>
+    </div>
+    
+    <!-- About Me Section -->
+    <section class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <div class="uk-grid-match" uk-grid>
+                <div class="uk-width-1-3@m">
+                    <div class="uk-card uk-card-default uk-card-body uk-box-shadow-small">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="John Doe" class="uk-border-circle uk-margin-bottom" width="200" height="200">
+                        <h3 class="uk-card-title">John Doe</h3>
+                        <p class="uk-text-meta">Web Developer & Designer</p>
+                        <div class="uk-margin">
+                            <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                            <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="facebook"></a>
+                            <a href="#" class="uk-icon-button" uk-icon="linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-2-3@m">
+                    <h2 class="uk-heading-bullet">About Me</h2>
+                    <p class="uk-text-lead">Passionate web developer with expertise in front-end and back-end technologies.</p>
+                    <p>I'm a skilled web developer and designer with over 5 years of experience creating beautiful, functional websites. I specialize in responsive design, user experience, and modern web technologies.</p>
+                    <p>My goal is to build websites that not only look great but also provide an exceptional user experience and meet business objectives.</p>
+                    
+                    <div class="uk-grid-small uk-child-width-1-2@s uk-margin-medium-top" uk-grid>
+                        <div>
+                            <div class="uk-card uk-card-primary uk-card-body uk-box-shadow-small" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                                <h3 class="uk-card-title">Frontend Skills</h3>
+                                <ul class="uk-list uk-list-bullet">
+                                    <li>HTML5 & CSS3</li>
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>React.js</li>
+                                    <li>UIkit & Bootstrap</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-secondary uk-card-body uk-box-shadow-small" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                                <h3 class="uk-card-title">Backend Skills</h3>
+                                <ul class="uk-list uk-list-bullet">
+                                    <li>Node.js</li>
+                                    <li>PHP</li>
+                                    <li>SQL Databases</li>
+                                    <li>RESTful APIs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="uk-section uk-section-default">
+        <div class="uk-container">
+            <h2 class="uk-heading-line uk-text-center"><span>My Services</span></h2>
+            
+            <div class="uk-child-width-1-3@m uk-grid-match uk-margin-medium-top" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body uk-text-center" uk-scrollspy="cls: uk-animation-fade; delay: 200; repeat: true">
+                        <span class="uk-icon uk-icon-large" uk-icon="icon: desktop; ratio: 3"></span>
+                        <h3 class="uk-card-title uk-margin-top">Web Design</h3>
+                        <p>Creating visually appealing, user-friendly websites with a focus on user experience and accessibility.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body uk-text-center" uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: true">
+                        <span class="uk-icon uk-icon-large" uk-icon="icon: code; ratio: 3"></span>
+                        <h3 class="uk-card-title uk-margin-top">Web Development</h3>
+                        <p>Building robust, scalable web applications using modern frameworks and best practices.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-hover uk-card-body uk-text-center" uk-scrollspy="cls: uk-animation-fade; delay: 600; repeat: true">
+                        <span class="uk-icon uk-icon-large" uk-icon="icon: phone; ratio: 3"></span>
+                        <h3 class="uk-card-title uk-margin-top">Responsive Design</h3>
+                        <p>Ensuring websites look and function perfectly on all devices, from mobile phones to desktop computers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section with Slideshow -->
+    <section class="uk-section uk-section-primary uk-light">
+        <div class="uk-container">
+            <h2 class="uk-heading-line uk-text-center"><span>Client Testimonials</span></h2>
+            
+            <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 5000">
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <div class="uk-container uk-container-small uk-text-center">
+                            <div class="uk-margin-bottom" uk-icon="icon: quote-right; ratio: 3"></div>
+                            <p class="uk-text-lead">John delivered our website project on time and on budget. His attention to detail and creative solutions exceeded our expectations.</p>
+                            <p class="uk-text-meta">- Sarah Johnson, Marketing Director</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-container uk-container-small uk-text-center">
+                            <div class="uk-margin-bottom" uk-icon="icon: quote-right; ratio: 3"></div>
+                            <p class="uk-text-lead">Working with John was a pleasure. He understood our requirements perfectly and created a website that truly represents our brand.</p>
+                            <p class="uk-text-meta">- Michael Brown, CEO</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-container uk-container-small uk-text-center">
+                            <div class="uk-margin-bottom" uk-icon="icon: quote-right; ratio: 3"></div>
+                            <p class="uk-text-lead">John's technical expertise and creative vision made our e-commerce site not only look great but also perform exceptionally well.</p>
+                            <p class="uk-text-meta">- Emily Davis, Shop Owner</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                
+                <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recent Work Preview -->
+    <section class="uk-section uk-section-default">
+        <div class="uk-container">
+            <h2 class="uk-heading-line uk-text-center"><span>Recent Work</span></h2>
+            
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-medium-top" uk-grid uk-lightbox="animation: fade">
+                <div>
+                    <div class="uk-inline uk-transition-toggle" tabindex="0">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project 1" width="1200" height="800">
+                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-text-center">
+                                <h3 class="uk-margin-small-bottom">E-commerce Website</h3>
+                                <p class="uk-margin-remove">Responsive online store</p>
+                                <a href="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="uk-button uk-button-primary uk-margin-small-top" data-caption="E-commerce Website - Responsive online store">View Larger</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-inline uk-transition-toggle" tabindex="0">
+                        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project 2" width="1200" height="800">
+                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-text-center">
+                                <h3 class="uk-margin-small-bottom">Corporate Website</h3>
+                                <p class="uk-margin-remove">Modern business site</p>
+                                <a href="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="uk-button uk-button-primary uk-margin-small-top" data-caption="Corporate Website - Modern business site">View Larger</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-inline uk-transition-toggle" tabindex="0">
+                        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project 3" width="1200" height="800">
+                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-text-center">
+                                <h3 class="uk-margin-small-bottom">Portfolio Website</h3>
+                                <p class="uk-margin-remove">Creative showcase</p>
+                                <a href="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="uk-button uk-button-primary uk-margin-small-top" data-caption="Portfolio Website - Creative showcase">View Larger</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="uk-text-center uk-margin-medium-top">
+                <a href="portfolio.html" class="uk-button uk-button-default uk-button-large">View All Projects</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Table -->
+    <section class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <h2 class="uk-heading-line uk-text-center"><span>Technical Skills</span></h2>
+            
+            <div class="uk-overflow-auto uk-margin-medium-top">
+                <table class="uk-table uk-table-divider uk-table-hover uk-table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Skill Category</th>
+                            <th>Technologies</th>
+                            <th>Experience Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Frontend</td>
+                            <td>HTML5, CSS3, JavaScript, React.js</td>
+                            <td>
+                                <progress class="uk-progress" value="90" max="100"></progress>
+                                <span>Advanced (90%)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Backend</td>
+                            <td>Node.js, PHP, Express.js</td>
+                            <td>
+                                <progress class="uk-progress" value="80" max="100"></progress>
+                                <span>Proficient (80%)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>MySQL, MongoDB, PostgreSQL</td>
+                            <td>
+                                <progress class="uk-progress" value="75" max="100"></progress>
+                                <span>Proficient (75%)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Design</td>
+                            <td>Figma, Adobe XD, Photoshop</td>
+                            <td>
+                                <progress class="uk-progress" value="85" max="100"></progress>
+                                <span>Advanced (85%)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>Git, Webpack, Docker</td>
+                            <td>
+                                <progress class="uk-progress" value="70" max="100"></progress>
+                                <span>Intermediate (70%)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="uk-section uk-section-secondary uk-light">
+        <div class="uk-container uk-text-center">
+            <h2>Ready to Start Your Project?</h2>
+            <p class="uk-text-lead">Let's work together to create something amazing.</p>
+            <a href="contact.html" class="uk-button uk-button-primary uk-button-large uk-margin-top">Get in Touch</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="uk-section uk-section-default uk-padding-small">
+        <div class="uk-container">
+            <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                <div>
+                    <h4>John Doe</h4>
+                    <p>Professional web developer and designer focused on creating beautiful, functional websites.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="uk-list uk-list-divider">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul class="uk-list">
+                        <li><span uk-icon="icon: mail"></span> johndoe@example.com</li>
+                        <li><span uk-icon="icon: receiver"></span> +1 234 567 890</li>
+                        <li><span uk-icon="icon: location"></span> New York, USA</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="uk-text-center">
+                <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- To Top Button -->
+    <a href="#" class="uk-totop uk-position-fixed uk-position-bottom-right uk-margin-medium-right uk-margin-medium-bottom" uk-totop uk-scroll></a>
+</body>
+</html>

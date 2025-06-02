@@ -1,0 +1,205 @@
+/* 
+  This file would normally contain the minified UIkit CSS.
+  For this project, we'll customize it by adding our own styles at the end.
+  In a real implementation, you would download the complete UIkit CSS and modify it.
+*/
+
+/* Custom styles for our website */
+
+/* 1. Custom font family settings */
+:root {
+  --main-font-family: 'Roboto', sans-serif;
+  --heading-font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--main-font-family);
+}
+
+h1, h2, h3, h4, h5, h6, .uk-heading-small, .uk-heading-medium, .uk-heading-large, .uk-heading-xlarge, .uk-heading-2xlarge {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+}
+
+/* 2. Custom primary color */
+.uk-button-primary {
+  background-color: #1e87f0;
+}
+.uk-button-primary:hover {
+  background-color: #0f6ecd;
+}
+
+.uk-card-primary {
+  background-color: #1e87f0;
+}
+
+.uk-alert-primary {
+  background-color: #d8eafc;
+  color: #0f6ecd;
+}
+
+.uk-section-primary {
+  background-color: #1e87f0;
+}
+
+.uk-label {
+  background-color: #1e87f0;
+}
+
+/* 3. Enhanced button styling */
+.uk-button {
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+.uk-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.uk-button-large {
+  padding: 0 32px;
+  line-height: 48px;
+  font-size: 16px;
+}
+
+/* 4. Card enhancements */
+.uk-card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.uk-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. Custom navbar styling */
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.uk-navbar-container .uk-logo {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  color: #1e87f0;
+}
+
+.uk-navbar-nav > li > a {
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  text-transform: none;
+  transition: color 0.2s ease;
+}
+
+.uk-navbar-nav > li:hover > a, 
+.uk-navbar-nav > li.uk-active > a {
+  color: #1e87f0;
+}
+
+/* 6. Form element styling */
+.uk-input, .uk-select, .uk-textarea {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+  border-color: #1e87f0;
+  box-shadow: 0 0 0 3px rgba(30, 135, 240, 0.2);
+}
+
+/* 7. Enhanced section spacing */
+.uk-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* 8. Animation enhancements */
+[uk-scrollspy] {
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* 9. Footer styling */
+footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+footer h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* 10. Hero section enhancements */
+.uk-height-large {
+  min-height: 500px;
+}
+
+/* 11. Progress bar styling */
+.uk-progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+/* 12. To-top button styling */
+.uk-totop {
+  background-color: #1e87f0;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.uk-totop:hover {
+  opacity: 1;
+  background-color: #0f6ecd;
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* 13. Custom icons */
+.uk-icon-button {
+  background-color: #f8f8f8;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.uk-icon-button:hover {
+  background-color: #1e87f0;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 960px) {
+  .uk-height-large {
+    min-height: 400px;
+  }
+  
+  h1.uk-heading-medium {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .uk-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .uk-height-large {
+    min-height: 300px;
+  }
+  
+  h1.uk-heading-medium {
+    font-size: 2rem;
+  }
+}
